@@ -1,0 +1,10 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# Optional: Remove .html extension (if you also use .html files)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
